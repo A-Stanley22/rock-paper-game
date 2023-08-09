@@ -1,4 +1,4 @@
- const options = document.querySelectorAll(".option");
+ const options = document.querySelectorAll(".tools");
  const playerScoreElem = document.querySelector(".player-score");
  const computerScoreElem = document.querySelector(".computer-score");
  const resultElem = document.querySelector("#result");
@@ -58,7 +58,7 @@ function computerWins() {
 function winner() {
     if (playerScore === 5) {
         resultElem.textContent = 'You win the game!';
-        resultElem.style.color = 'green';
+        resultElem.style.color = 'purple';
         gameOverElem.innerHTML = 'Game Over';
         disableOptions();
     } else if (computerScore === 5) {
@@ -76,7 +76,7 @@ function gameReset() {
     playerScoreElem.innerHTML = '0';
     computerScoreElem.innerHTML = '0';
     resultElem.innerHTML = 'Choose your weapon!';
-    resultElem.style.color = '#660033';
+    resultElem.style.color = 'yellow';
     gameOverElem.innerHTML = '';
     enableOptions();
 }
@@ -96,3 +96,6 @@ function enableOptions() {
 // Event listeners
 options.forEach((option) => option.addEventListener('click', playerChoice));
 playAgainBtn.addEventListener('click', gameReset);
+
+
+               
